@@ -1,17 +1,21 @@
-export let booklist = [];
-export class Book {
+const booklist = [];
+export default class Book {
+  constructor() {
+    this.booklist = JSON.parse(localStorage.getItem('storage-book')) || [];
+  }
 
   updateStorage(data) {
-    localStorage.setItem('bookLists', JSON.stringify(data));
+    localStorage.setItem('storage-book', JSON.stringify(data));
+    this.booksList = data;
   }
 
   // Remove title function
 
   removeBook(title) {
     const rm = new Book();
-    for (let i = booklist.length - 1; i >= 0; i -= 1) {
-      if (booklist[i].title === title) {
-        booklist.splice(i, 1);
+    for (let i = this.booklist.length - 1; i >= 0; i -= 1) {
+      if (this.booklist[i].title === title) {
+        this.booklist.splice(i, 1);
         rm.updateStorage(booklist);
         break;
       }
@@ -21,8 +25,8 @@ export class Book {
   // Function to display the book's list
 
   displayBooks() {
-    document.getElementById('library').innerHTML = `<h2 class="list-title">List of books</h2>`;
-    booklist.forEach((book) => {
+    document.getElementById('library').innerHTML = '<h2 class="list-title">List of books</h2>';
+    this.booklist.forEach((book) => {
       const bookItem = document.createElement('div');
       const booksTable = document.getElementById('library');
       bookItem.classList.add('book-item');
@@ -48,7 +52,7 @@ export class Book {
     const ld = new Book();
     const storedBookList = localStorage.getItem('bookLists');
     if (storedBookList) {
-      booklist = JSON.parse(storedBookList);
+      this.booklist = JSON.parse(storedBookList);
       ld.displayBooks();
     }
   }
@@ -59,7 +63,7 @@ export class Book {
     const book = { title: '', author: '' };
     book.title = ttle;
     book.author = athr;
-    booklist.push(book);
-    bk.updateStorage(booklist);
+    this.booklist.push(book);
+    bk.updateStorage(this.booklist);
   }
 }
