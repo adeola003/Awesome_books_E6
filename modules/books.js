@@ -4,14 +4,14 @@ export default class Book {
     this.booklist = JSON.parse(localStorage.getItem('storage-book')) || [];
   }
 
-  updateStorage = (data)=> {
+  updateStorage = (data) => {
     localStorage.setItem('storage-book', JSON.stringify(data));
     this.booksList = data;
   }
 
   // Remove title function
 
-  removeBook = (title)=> {
+  removeBook = (title) => {
     const rm = new Book();
     for (let i = this.booklist.length - 1; i >= 0; i -= 1) {
       if (this.booklist[i].title === title) {
@@ -21,7 +21,7 @@ export default class Book {
       }
     }
   }
-  
+
   // Function to display the book's list
 
   displayBooks = () => {
@@ -48,7 +48,7 @@ export default class Book {
     });
   }
 
-  loadFromStorage = ()=> {
+  loadFromStorage = () => {
     const ld = new Book();
     const storedBookList = localStorage.getItem('bookLists');
     if (storedBookList) {
@@ -58,7 +58,7 @@ export default class Book {
   }
 
   // Function to add new books
-  addBooks = (ttle, athr)=> {
+  addBooks = (ttle, athr) => {
     const bk = new Book();
     const book = { title: '', author: '' };
     book.title = ttle;
