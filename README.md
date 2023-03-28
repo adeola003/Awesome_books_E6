@@ -90,7 +90,7 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 ```sh
-  git clone https://github.com/yaredtekle022/Awesome_books.git
+  git clone https://github.com/adeola003/Awesome_books_E6.git
   cd Awesome_books
 ```
 ### Install
