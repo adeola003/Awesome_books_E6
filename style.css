@@ -1,0 +1,124 @@
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+
+#date-container {
+  display: block;
+  text-align: right;
+  margin-right: 10%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  border-radius: 6px;
+  box-shadow: 3px 3px black;
+  align-items: center;
+}
+
+.welcome {
+  border: 1px solid burlywood;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  height: 150px;
+}
+
+.welcome p {
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+}
+
+.list-items {
+  padding-right: 40px;
+  display: flex;
+  list-style: none;
+  column-gap: 10px;
+}
+
+.logo {
+  padding-left: 40px;
+}
+
+#adding-form {
+  text-align: center;
+}
+
+#form {
+  row-gap: 15px;
+}
+
+#add-btn {
+  width: 100px;
+  height: 30px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.book-item {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.book-item div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.books-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-item:nth-child(even) {
+  background-color: rgb(180, 176, 176);
+}
+
+.form-elements {
+  list-style: none;
+  margin-bottom: 8px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.form-elements li {
+  margin-bottom: 8px;
+  width: auto;
+}
+
+input {
+  height: 30px;
+  width: 100%;
+}
+
+#contact {
+  text-align: center;
+}
+
+#contact ul {
+  list-style: none;
+}
+
+footer {
+  border: 2px solid black;
+  top: 19vh;
+  width: 80%;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top: 6px;
+  position: relative !important;
+}
+
+.disabled {
+  display: none;
+}
